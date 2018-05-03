@@ -43,7 +43,7 @@ app.controller('LogTestCtrl', ['$log', 'LoggerSvc',  function ($log, LoggerSvc) 
     LoggerSvc.handle(view: string,
                     message: any,
                     data: any,
-                    logType: string',
+                    logType: string,
                     sendToServer?: boolean);
     LoggerSvc.unHandle(exception: any,
                     cause: any);
