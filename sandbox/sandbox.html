@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Logger Service</title>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    
+    <!-- Scripts -->
+    <script src="../dist/index.js"></script>
+    <script src="./sandbox.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        .mt-2{
+            margin-top: 2%;
+        }
+        .ml-5{
+            margin-left: 5%;
+        }
+    </style>
+</head>
+
+<body ng-app="logger-js">
+    <h1 class="ml-5">Logger Service</h1>
+    
+    <section ng-controller="LoggerCtrl" id="loggerSection" class="mt-2 ml-5">
+        <div class="col-sm-12">
+            <div class="col-sm-6">
+                <button type="button" ng-click="calLogSvc('log')" class="btn btn-default">Log</button>
+                <button type="button" ng-click="calLogSvc('debug')" class="btn btn-primary">Debug</button>
+                <button type="button" ng-click="calLogSvc('info')" class="btn btn-info">Info</button>
+                <button type="button" ng-click="calLogSvc('warning')" class="btn btn-warning">Warning</button>
+                <button type="button" ng-click="calLogSvc('error')" class="btn btn-danger">Error</button>
+                <div class="mt-2">
+                    <textarea rows="4" cols="50" ng-model="logText"></textarea>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="mt-2 col-sm-12 ">
+                    <label class="col-sm-6"> URL: </label>
+                    <input class="col-sm-6" type="text" ng-model="logState.url">
+                </div>
+                <div class="mt-2 col-sm-12">
+                    <label class="col-sm-6"> Timer (in Milliseconds):</label>
+                    <input class="col-sm-6" type="text" ng-model="logState.timer">
+                </div>
+                <div class="mt-2 col-sm-12">
+                    <label class="col-sm-6"> Enabled :</label>
+                    <input class="col-sm-6" type="checkbox" ng-model="logState.enabled">
+                </div>
+                <div class="mt-2 col-sm-12">
+                    <label class="col-sm-6"> Console Logs Enabled :</label>
+                    <input class="col-sm-6" type="checkbox" ng-model="logState.consoleLogsEnabled">
+                </div>
+                <div class="mt-2 col-sm-12">
+                    <button class="btn btn-default pull-right" type="button" ng-click="setLoggingState()">Set Logging</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

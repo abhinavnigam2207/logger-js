@@ -1,0 +1,45 @@
+{
+  "name": "logger-js",
+  "version": "1.0.0",
+  "description": "Library component for logging and exception/error tracking.",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"No test specified\\\" && exit 0\""
+  },
+  "keywords": [
+    "Logging",
+    "Stacktrace",
+    "Error",
+    "Handling"
+  ],
+  "author": "UI Team Markit",
+  "license": "BSD-2-Clause",
+  "publishConfig": {
+    "registry": "https://nexus-eu.mdevlab.com/repository/markit-npm"
+  },
+  "dependencies": {
+    "angular": "^1.5.0",
+    "rx": "^4.1.0",
+    "stacktrace-js": "0.5.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.5",
+    "babel-eslint": "^6.0.2",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify":"^14.4.0",
+    "browserify-ngannotate": "^2.0.0",
+    "browserify-shim": "^3.8.12",
+    "gulp": "^3.9.1",
+    "gulp-connect":"^5.0.0",
+    "tsify":"^3.0.1",
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.8",
+    "vinyl-source-stream":"^1.1.0"
+  },
+  "browserify-shim": {
+    "angular": "global:angular"
+  }
+}
